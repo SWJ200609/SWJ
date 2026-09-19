@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#faf9f7" id="themeColor">
+<meta name="description" content="CET-6 与考研英语二核心考点手册网页版：全站搜索、进度记录、分类筛选">
+<meta name="apple-mobile-web-app-title" content="考点手册">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>首页 · CET-6 &amp; 考研英语二考点手册</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%93%97%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+
+<header class="topbar">
+  <button class="btn icon menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+  <a class="brand" href="index.html">
+    <span class="dot"></span>CET-6<span style="color:var(--muted);font-weight:400">·</span><span class="dot b"></span><span class="ky-full">考研英语二</span><span class="ky-short">考研二</span>
+  </a>
+  <div class="search">
+    <input id="q" type="search" placeholder="全站搜索：contribute to / 倒装 / 虚拟语气" autocomplete="off" spellcheck="false" aria-label="全站搜索">
+    <button class="clear" id="clearQ" aria-label="清除">×</button>
+    <span id="count" class="count"></span>
+  </div>
+  <div class="tools">
+    <button class="btn icon" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+  </div>
+  <div id="results" aria-label="搜索结果"></div>
+</header>
+
+<div class="layout">
+  <aside class="nav" id="nav"><div id="navList">
+    <h4>入口</h4><ul><li><a href="index.html" class="on">🏠 首页 · 使用说明</a></li></ul>
+    <h4>CET-6</h4><ul>
+    <li><a href="cet6-vocab.html">🧩 核心词</a></li>
+    <li><a href="cet6-methods.html">🎯 做题方法</a></li>
+    </ul>
+    <h4>考研英语二</h4><ul>
+    <li><a href="ky2-vocab.html">🎓 核心词</a></li>
+    <li><a href="ky2-methods.html">🎯 做题方法</a></li>
+    </ul>
+    <h4>通用工具</h4><ul>
+    <li><a href="diff.html">🔀 近义词辨析</a></li>
+    <li><a href="coll.html">🔗 固定搭配</a></li>
+    <li><a href="root.html">🧬 词根词缀</a></li>
+    <li><a href="grammar.html">📐 语法句式</a></li>
+    <li><a href="writing.html">✍️ 写作翻译</a></li>
+    <li><a href="plan.html">🗓️ 30 天计划</a></li>
+    </ul>
+    <div class="stats">
+  <div class="row"><span>CET-6</span><span class="st st-cet6">0 / 0</span></div>
+  <div class="bar"><i class="bar-cet6"></i></div>
+  <div class="row"><span>考研英语二</span><span class="st st-ky2">0 / 0</span></div>
+  <div class="bar"><i class="b bar-ky2"></i></div>
+  <div class="row"><span id="statNote">进度已自动保存</span></div>
+</div>
+    </div></aside>
+
+  <main>
+<section class="hero" id="top">
+  <h1>CET-6 &amp; 考研英语二<span>核心考点手册 · 网页版</span></h1>
+  <p class="lead">按「单词 → 考点 → 出题倾向」整理，配各题型最佳做题流程。
+  每一节都是独立页面，手机上加书签或添加到主屏就能随时翻。</p>
+  <div class="hero-prog">
+    <div class="hp">
+      <div class="hp-t"><b>CET-6</b><span class="st st-cet6">0 / 128</span></div>
+      <div class="bar"><i class="bar-cet6"></i></div>
+    </div>
+    <div class="hp">
+      <div class="hp-t"><b>考研英语二</b><span class="st st-ky2">0 / 113</span></div>
+      <div class="bar"><i class="b bar-ky2"></i></div>
+    </div>
+  </div>
+  <div class="hero-acts">
+    <a class="btn big pri" href="cet6-vocab.html">从 CET-6 核心词开始 →</a>
+    <a class="btn big sec" href="ky2-vocab.html">从考研英语二核心词开始 →</a>
+  </div>
+  <div class="hp-meta">
+    <span><b>241</b> 张可勾选卡片</span>
+    <span><b>11</b> 节</span>
+    <span><b>20</b> 组近义辨析</span>
+    <span><b>9</b> 大语法考点</span>
+  </div>
+</section>
+<section id="usage">
+  <div class="sec-head"><h2>📖 使用说明</h2></div>
+  <p>本手册把 <b>CET-6 高频核心词</b>与<b>考研英语二（经济/社会题材为主）核心词</b>按「单词 → 考点 → 出题倾向」的格式整理，再配上各题型的<b>最佳做题流程</b>。建议配合使用：</p>
+  <div class="sub">
+  <h4>三个核心工具</h4>
+  <p>① <b>全站搜索</b>：支持中英文混合——搜 <code>yield</code>、<code>妥协</code>、<code>contribute to</code>、<code>虚拟语气</code> 都能命中，不管目标在哪一页，点结果直接跳到那一节的对应条目。<br>
+  ② <b>「已掌握」勾选</b>：按「考试 : 单词」记在本机浏览器里，跨页面、跨章节、刷新后都保留；侧边栏、手机底部条、首页进度卡三处同步。<br>
+  ③ <b>分类筛选</b>：两个词汇区都可用「全部 / 仅高频 / 未掌握 / 已掌握」过滤，还能一键「展开全部 / 收起全部」。</p>
+</div>
+<div class="note ok"><b>网页版怎么用</b>
+  每一节都是独立页面，可以直接加书签、或「添加到主屏」当 App 用；页面底部有「上一节 / 下一节」，能像翻书一样连着看。所有进度只存在你自己浏览器的本地存储里——不上传、不联网，清掉浏览器站点数据就会重置，换设备需要重新勾选。
+</div>
+  <div class="pill-row">
+    <span class="theme">▸</span><span class="hint" style="margin:0">每条考点前的小三角代表一个独立记忆点</span>
+  </div>
+  <div class="note tip"><b>怎么用效果最好</b>
+    先<b>看考点不看释义</b>：合上答案，只念英文单词，试着说出它的「搭配 + 陷阱」。说得出就勾选，说不出就展开。考研与 CET-6 真正的失分点几乎从不是「不认得这个单词」，而是<b>认得它但不会用它</b>——搭配错了、辨析错了、题型定位错了。本手册的重点就放在这三处。
+  </div>
+  <div class="note warn"><b>两本词汇的关系</b>
+    CET-6 侧重<b>学术与科技语料</b>（allege、empirical、paradigm），考研英语二侧重<b>经济与社会应用语料</b>（boost、marginal、turnover）。两本词汇重叠度约 40%——重叠词在两个列表中都出现，但<b>考点角度不同</b>：CET-6 更问「这个词在篇章里表什么态度」，考研更问「这个词和什么搭配、在翻译里怎么处理」。
+  </div>
+</section>
+<section class="chapters">
+  <h2>本册目录</h2>
+  <p class="hint">点卡片进对应章节，页尾有「上一节 / 下一节」。</p>
+  <div class="cards">
+    <a class="card c" href="cet6-vocab.html">
+      <span class="ct">🧩 CET-6 高频核心词</span>
+      <span class="cd">词根 → 搭配 → 辨析 → 出题倾向，按学术/议论/写作/社会/科技 5 个主题分块</span>
+      <span class="cg">128 词</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card c" href="cet6-methods.html">
+      <span class="ct">🎯 CET-6 做题方法</span>
+      <span class="cd">130 分钟 · 710 分，按拿分性价比排优先级，7 个题型逐个给流程</span>
+      <span class="cg">7 题型</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card k" href="ky2-vocab.html">
+      <span class="ct">🎓 考研英语二 核心词</span>
+      <span class="cd">经济/社会/应用题材为主，重搭配与翻译处理，5 个主题分块</span>
+      <span class="cg">113 词</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card k" href="ky2-methods.html">
+      <span class="ct">🎯 考研英语二 做题方法</span>
+      <span class="cd">180 分钟 · 100 分，做题顺序 + 完形/阅读/新题型/翻译/大小作文</span>
+      <span class="cg">8 板块</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="diff.html">
+      <span class="ct">🔀 近义词辨析</span>
+      <span class="cd">每组只记「最核心的那一个区别」，完形/翻译/写作三处都能用</span>
+      <span class="cg">20 组</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="coll.html">
+      <span class="ct">🔗 高频固定搭配</span>
+      <span class="cd">完形、翻译、写作三处通用的核心搭配</span>
+      <span class="cg">8 组</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="root.html">
+      <span class="ct">🧬 词根词缀</span>
+      <span class="cd">遇到陌生词靠「拆」猜大意：高频前缀、后缀、不规则复数</span>
+      <span class="cg">62 条</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="grammar.html">
+      <span class="ct">📐 语法与句式</span>
+      <span class="cd">阅读解长难句 + 写作升格的核心 9 大考点</span>
+      <span class="cg">9 考点</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="writing.html">
+      <span class="ct">✍️ 写作与翻译模板</span>
+      <span class="cd">通用功能句 · 高分替换 · 翻译高频表达库 · 图表/图画常用</span>
+      <span class="cg">4 库</span>
+      <span class="go">进入 →</span>
+    </a>
+    <a class="card " href="plan.html">
+      <span class="ct">🗓️ 30 天冲刺复习计划</span>
+      <span class="cd">考研英语二专用，每天 3 小时可执行，四个阶段 + 每日模板</span>
+      <span class="cg">4 阶段</span>
+      <span class="go">进入 →</span>
+    </a>
+  </div>
+</section>
+
+    <nav class="pager">
+  <a class="home" href="index.html">🏠 目录</a>
+  <a class="next" href="cet6-vocab.html">下一节<span>CET-6 高频核心词</span></a>
+</nav>
+    <footer class="foot">
+      <span>CET-6 &amp; 考研英语二 · 核心考点手册 · 网页版</span>
+      <span><a href="index.html">回到首页</a></span>
+    </footer>
+  </main>
+</div>
+
+<button class="mobbar" id="mobbar" aria-label="打开目录与进度">
+  <span class="mb"><span class="lb">CET-6 <b id="mCet6">0/0</b></span><span class="tr"><i id="mbCet6"></i></span></span>
+  <span class="mb"><span class="lb">考研二 <b id="mKy2">0/0</b></span><span class="tr"><i class="b" id="mbKy2"></i></span></span>
+  <span class="go">☰</span>
+</button>
+<div class="scrim" id="scrim"></div>
+<noscript><p style="padding:14px;color:#b91c1c">本手册的搜索、进度保存与筛选需要启用 JavaScript。</p></noscript>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#faf9f7" id="themeColor">
+<meta name="description" content="180 分钟 · 100 分 · 按「拿分性价比」排优先级">
+<meta name="apple-mobile-web-app-title" content="考点手册">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>考研英语二 做题方法 · CET-6 &amp; 考研英语二考点手册</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%93%97%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ky2-methods">
+
+<header class="topbar">
+  <button class="btn icon menu-btn" id="menuBtn" aria-label="打开目录">☰</button>
+  <a class="brand" href="index.html">
+    <span class="dot"></span>CET-6<span style="color:var(--muted);font-weight:400">·</span><span class="dot b"></span><span class="ky-full">考研英语二</span><span class="ky-short">考研二</span>
+  </a>
+  <div class="search">
+    <input id="q" type="search" placeholder="全站搜索：contribute to / 倒装 / 虚拟语气" autocomplete="off" spellcheck="false" aria-label="全站搜索">
+    <button class="clear" id="clearQ" aria-label="清除">×</button>
+    <span id="count" class="count"></span>
+  </div>
+  <div class="tools">
+    <button class="btn icon" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+  </div>
+  <div id="results" aria-label="搜索结果"></div>
+</header>
+
+<div class="layout">
+  <aside class="nav" id="nav"><div id="navList">
+    <h4>入口</h4><ul><li><a href="index.html">🏠 首页 · 使用说明</a></li></ul>
+    <h4>CET-6</h4><ul>
+    <li><a href="cet6-vocab.html">🧩 核心词</a></li>
+    <li><a href="cet6-methods.html">🎯 做题方法</a></li>
+    </ul>
+    <h4>考研英语二</h4><ul>
+    <li><a href="ky2-vocab.html">🎓 核心词</a></li>
+    <li><a href="ky2-methods.html" class="on">🎯 做题方法</a></li>
+    </ul>
+    <h4>通用工具</h4><ul>
+    <li><a href="diff.html">🔀 近义词辨析</a></li>
+    <li><a href="coll.html">🔗 固定搭配</a></li>
+    <li><a href="root.html">🧬 词根词缀</a></li>
+    <li><a href="grammar.html">📐 语法句式</a></li>
+    <li><a href="writing.html">✍️ 写作翻译</a></li>
+    <li><a href="plan.html">🗓️ 30 天计划</a></li>
+    </ul>
+    <div class="stats">
+  <div class="row"><span>CET-6</span><span class="st st-cet6">0 / 0</span></div>
+  <div class="bar"><i class="bar-cet6"></i></div>
+  <div class="row"><span>考研英语二</span><span class="st st-ky2">0 / 0</span></div>
+  <div class="bar"><i class="b bar-ky2"></i></div>
+  <div class="row"><span id="statNote">进度已自动保存</span></div>
+</div>
+    </div></aside>
+
+  <main>
+<section id="ky2-methods" data-exam="ky2">
+  <div class="sec-head">
+    <h2>🎯 考研英语二 做题方法</h2>
+    <span class="tag-line">180 分钟 · 100 分 · 按「拿分性价比」排优先级</span>
+  </div>
+  <div class="toc2">
+    <a href="#k2-struct">试卷结构</a>
+    <a href="#k2-order">做题顺序</a>
+    <a href="#k2-cloze">完形填空</a>
+    <a href="#k2-read">阅读 A</a>
+    <a href="#k2-newtype">阅读 B 新题型</a>
+    <a href="#k2-trans">翻译</a>
+    <a href="#k2-wa">小作文</a>
+    <a href="#k2-wb">大作文</a>
+  </div>
+
+  <h3 id="k2-struct">① 试卷结构与时间分配</h3>
+  <div class="tw"><table>
+    <thead><tr><th>部分</th><th>题量</th><th>分值</th><th>建议用时</th><th>性价比</th><th>目标</th></tr></thead>
+    <tbody>
+    <tr><td>完形填空 Part A</td><td>20 题</td><td>10 分</td><td>25 min</td><td>⭐⭐ 每题 0.5 分</td><td>8/10</td></tr>
+    <tr><td>阅读理解 Part A</td><td>4 篇×5 题</td><td>40 分</td><td>60 min</td><td>⭐⭐⭐⭐⭐ 每题 2 分</td><td>30/40</td></tr>
+    <tr><td>阅读理解 Part B 新题型</td><td>5 题</td><td>10 分</td><td>20 min</td><td>⭐⭐⭐⭐ 每题 2 分</td><td>8/10</td></tr>
+    <tr><td>翻译（英译汉）</td><td>150 词短文</td><td>15 分</td><td>30 min</td><td>⭐⭐⭐ 稳分</td><td>11–12</td></tr>
+    <tr><td>写作 Part A 小作文</td><td>约 100 词</td><td>10 分</td><td>25 min</td><td>⭐⭐⭐⭐ 可模板</td><td>7.5+</td></tr>
+    <tr><td>写作 Part B 大作文</td><td>约 150 词</td><td>15 分</td><td>25 min</td><td>⭐⭐⭐⭐ 可模板</td><td>11+</td></tr>
+    <tr><td><b>合计</b></td><td>—</td><td><b>100 分</b></td><td><b>180 min</b></td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <p class="hint">⚠️ 近年大纲调整过 <b>大作文 15 分 / 20 分</b> 两个版本，写作合计 25 分或 30 分；具体以当年考试大纲与真题首页为准。英语二无听力、无听写。</p>
+
+  <h3 id="k2-order">② 做题顺序（考场实际执行）</h3>
+  <div class="note ok"><b>推荐顺序：小作文 → 大作文 → 阅读 A → 阅读 B 新题型 → 翻译 → 完形填空</b>
+    理由：① 发卷后写作分值最确定，先写锁定保底；② 阅读状态最好的时候先做；③ 翻译次之；④ 完形每题 0.5 分性价比最低，放最后，来不及就蒙——但<b>蒙也按 B/C 集中填</b>，比全蒙 A 命中率高一档。</div>
+  <ol class="steps">
+    <li><b>0:00–0:25</b>：小作文（模板背熟，25 分钟内写完并检查）</li>
+    <li><b>0:25–0:50</b>：大作文</li>
+    <li><b>0:50–1:50</b>：阅读 A 四篇（每题 2 分，共 20 分主力）</li>
+    <li><b>1:50–2:10</b>：阅读 B 新题型</li>
+    <li><b>2:10–2:40</b>：翻译</li>
+    <li><b>2:40–3:00</b>：完形填空 + 涂卡检查</li>
+  </ol>
+
+  <h3 id="k2-cloze">③ 完形填空 Part A · 20 题 · 10 分</h3>
+  <p>英语二完形是<b>一篇约 300 词的连贯短文</b>，4 选项填空。题材多为经济、社会、科技、生活。</p>
+  <div class="sub" id="c-ky2-methods-1">
+    <h4>三大线索（缺一不可）</h4>
+    <p>🔹 <b>语法线索</b>：词性、时态、单复数、固定搭配（如 <code>substitute A for B</code>）</p>
+    <p>🔹 <b>语义线索</b>：上下文的因果、转折、并列、递进关系</p>
+    <p>🔹 <b>复现线索</b>：空格处的词在文中是否出现过（原词复现 / 同义复现 / 上下义复现）——<b>这是最高效的抓分点</b></p>
+  </div>
+  <ol class="steps">
+    <li><b>先通读全文（1 分钟）</b>：不填空，只看主旨。知道文章在说什么，一半的空自然填对</li>
+    <li><b>先易后难</b>：先填「一眼确定」的空，再攻难题</li>
+    <li><b>逐空验证</b>：把选项代回原文，看是否<b>与上下文衔接自然</b></li>
+    <li><b>最后通读</b>：整体是否通顺，有无明显搭配错误</li>
+  </ol>
+  <div class="note bad"><b>最常踩的坑</b>
+    ① <b>只看词义不看搭配</b>：<code>substitute A for B</code> ≠ <code>replace A with B</code>，方向搞反必错；
+    ② <b>就近取义</b>：只和空格前一两个词搭配就下结论，实际考点在整段逻辑；
+    ③ <b>褒贬误判</b>：<code>stimulate</code> 中性偏正、<code>detrimental</code> 明确偏负——文章基调决定选项方向。</div>
+
+  <h3 id="k2-read">④ 阅读理解 Part A · 4 篇×5 题 · 40 分</h3>
+  <div class="note ok"><b>三大铁律</b>
+    ① <b>顺序对应</b>：题目顺序 ≈ 文章顺序，90% 成立；② <b>答案在原文</b>：不要靠常识推理；③ <b>同义替换</b>：正确答案几乎从不用原词。</div>
+  <div class="sub" id="c-ky2-methods-2">
+    <h4>做题顺序策略（超高效）</h4>
+    <p>4 篇里，<b>第 2、3 篇通常最简单</b>（题材贴近生活、结构清晰）——<b>先做第 2、3 篇，再做第 4、1 篇</b>。前四篇顺序：2 → 3 → 4 → 1，能抢 2–4 分。</p>
+    <p>每篇<b>先读题干，不读全文</b>，用题干关键词回文定位。全文只读一遍，且是<b>边定位边读</b>，不是通读后再做题。</p>
+  </div>
+  <div class="sub" id="c-ky2-methods-3">
+    <h4>五大题型与打法</h4>
+    <p>🔹 <b>细节题</b>（最多，占 60%+）→ 划题干关键词 → 回文定位 → 比同义替换 → 排除无中生有</p>
+    <p>🔹 <b>主旨题</b>（<code>mainly about</code> / <code>mainly discuss</code>，常为第 1 题或末题）→ 看首段首句 + 尾段 + 转折后；答案必须<b>覆盖全篇</b>，只说局部的必错</p>
+    <p>🔹 <b>推断题</b>（<code>It can be inferred that</code>）→ 答案不超出原文，但也非原文直说；<b>过度推断是主要失分点</b>，正确答案通常只比原文「多一步」</p>
+    <p>🔹 <b>态度题</b>（<code>The author's attitude is</code>）→ 抓褒贬词：crucial / detrimental / skeptical / indifferent / objective；<b>答案几乎都是「客观、中立」</b>，除非有明显立场词</p>
+    <p>🔹 <b>词义/指代题</b>（<code>The word X in Paragraph Y refers to</code>）→ 回指上文，找解释、例证、定义句；<b>不要凭单词书词义选</b>，要看上下文的具体含义</p>
+  </div>
+  <div class="sub" id="c-ky2-methods-4">
+    <h4>错误选项五大特征（看到就划掉）</h4>
+    <p>❌ <b>无中生有</b>：选项信息在文中找不到依据<br>
+    ❌ <b>偷换概念</b>：A 导致 B，选项写成 B 导致 A；或把「可以」写成「必然」<br>
+    ❌ <b>以偏概全</b>：只对应文中的某一处，不是全文或整体<br>
+    ❌ <b>绝对化</b>：always / never / must / only / completely / entirely——这些词一出现就高度警惕<br>
+    ❌ <b>张冠李戴</b>：把 A 的特点安到 B 头上</p>
+  </div>
+  <div class="note warn"><b>时间铁律</b>
+    每篇 <b>15 分钟</b>（含定位、比对、涂卡）。一题纠缠超过 90 秒就蒙，转下一题——完形和翻译的分值可以补回来，阅读错了就是硬伤。</div>
+
+  <h3 id="k2-newtype">⑤ 阅读理解 Part B 新题型 · 5 题 · 10 分</h3>
+  <p>新题型在英语一里是「7 选 5」，<b>英语二只有三种题型轮换出现</b>，难度总体更低，必须拿满。</p>
+  <div class="sub" id="c-ky2-methods-5">
+    <h4>三种题型与核心技巧</h4>
+    <p>🔹 <b>排序题（段落排序）</b>：找<b>首段标志</b>——不指代、不含代词、含主题词；找<b>尾段标志</b>——总结、呼吁、未来展望。中间段落用<b>代词/连接词</b>定位（this / such / however / therefore 承接前段）。</p>
+    <p>🔹 <b>选段填空（小段落还原，6 选 5 或 5 选 5）</b>：先看空前后句，找<b>代词指代对象</b>和<b>关键词复现</b>；正确段落与上下文是<b>同义替换</b>，不是原词复现。</p>
+    <p>🔹 <b>句子还原</b>：题干是短文，给五个句子选项。技巧同上——看<b>空处上下文</b>逻辑关系（并列/转折/例证/递进），看<b>关键词复现</b>。</p>
+  </div>
+  <div class="note tip"><b>三个救命信号词</b>
+    ① 代词：<b>this / it / they / such</b> —— 空格前一段必须提到所指对象；
+    ② 连接词：<b>however / therefore / moreover</b> —— 空格句必须承接上一句的方向；
+    ③ 名词复现：空格句的<b>关键名词</b>在上一句出现过，是最强证据。</div>
+
+  <h3 id="k2-trans">⑥ 翻译（英译汉）· 150 词 · 15 分</h3>
+  <p>英语二翻译是<b>一整段关于经济或社会的短文</b>，150 词左右，6–8 句。不是逐句直译，是<b>按意群翻译</b>。</p>
+  <ol class="steps">
+    <li><b>通读全文</b>：判断文章在说什么主题（经济？社会？）</li>
+    <li><b>分句划分</b>：找句号/分号/关系从句，划成 6–8 个意群</li>
+    <li><b>逐句拆主干</b>：每句先找主谓宾，再处理定语、状语、非谓语</li>
+    <li><b>按中文习惯重排</b>：定语从句后置、分词短语前置、被动改主动</li>
+    <li><b>回读通顺</b>：把中文读一遍，确保<b>像人话</b>——不通顺等于没得分</li>
+    <li><b>术语核对</b>：专有名词、数字、经济术语是否准确</li>
+  </ol>
+  <div class="sub" id="c-ky2-methods-6">
+    <h4>高频经济与社会术语（背下来直接用）</h4>
+    <div class="tw"><table>
+      <thead><tr><th>英文</th><th>中文</th><th>英文</th><th>中文</th></tr></thead>
+      <tbody>
+      <tr><td>economic growth</td><td>经济增长</td><td>consumer demand</td><td>消费需求</td></tr>
+      <tr><td>market economy</td><td>市场经济</td><td>supply and demand</td><td>供求关系</td></tr>
+      <tr><td>income gap</td><td>收入差距</td><td>unemployment rate</td><td>失业率</td></tr>
+      <tr><td>tax reduction</td><td>减税</td><td>social security</td><td>社会保障</td></tr>
+      <tr><td>private enterprise</td><td>私营企业</td><td>foreign investment</td><td>外资</td></tr>
+      <tr><td>urbanization</td><td>城市化</td><td>infrastructure</td><td>基础设施</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="sub" id="c-ky2-methods-7">
+    <h4>翻译六大高频结构（掌握就够）</h4>
+    <p>🔹 <b>定语从句</b>：<code>The measures that the government has taken</code> → 政府所采取的措施（把 that 从句放到「措施」前，加「所」或「的」）</p>
+    <p>🔹 <b>过去分词短语</b>：<code>Measures taken by the government</code> → 政府所采取的措施</p>
+    <p>🔹 <b>现在分词短语</b>：<code>Consumers, seeking better service,</code> → 寻求更好服务的消费者</p>
+    <p>🔹 <b>不定式短语</b>：<code>measures aimed at promoting growth</code> → 旨在促进增长的措施</p>
+    <p>🔹 <b>with 独立主格</b>：<code>With prices rising,</code> → 随着物价上涨，</p>
+    <p>🔹 <b>被动语态</b>：<code>measures are taken to promote growth</code> → 采取了促进增长的措施（尽量改主动）</p>
+  </div>
+  <div class="note bad"><b>翻译三大失分点</b>
+    ① <b>逐字直译</b>：一个英语句子里有两个动词，中文里只能有一个主谓——第二动词必须变成<b>名词性成分</b>或<b>从句</b>；
+    ② <b>漏译</b>：一个词对应不了中文，或漏掉某个小词（如 <code>by</code>、<code>to</code>），都要补上；
+    ③ <b>硬译</b>：把 <code>It is important that…</code> 译成「它是重要的」——要译成「……很重要」。</div>
+
+  <h3 id="k2-wa">⑦ 写作 Part A 小作文 · 约 100 词 · 10 分</h3>
+  <p>英语二小作文几乎<b>必考「应用文」</b>：书信、通知、海报、告示、备忘录、演讲稿之一。</p>
+  <div class="sub" id="c-ky2-methods-8">
+    <h4>三段式骨架（通用，所有应用文都适用）</h4>
+    <ol class="steps">
+      <li><b>第一段（1–2 句）</b>：说明<b>写信/写通知的目的</b>——这是应用文的命脉，不能模糊</li>
+      <li><b>第二段（3–4 句）</b>：写<b>具体内容</b>——时间、地点、人物、事项、注意事项</li>
+      <li><b>第三段（1–2 句）</b>：收尾——期待、感谢、署名</li>
+    </ol>
+  </div>
+  <div class="sub" id="c-ky2-methods-9">
+    <h4>四类应用文功能句</h4>
+    <p>🔹 <b>书信（申请/感谢/邀请/道歉/建议）</b>：开头 <code>I am writing to inform you that…</code> / <code>I would like to apply for…</code>；结尾 <code>I would be grateful if you could…</code> / <code>Looking forward to your early reply.</code></p>
+    <p>🔹 <b>通知</b>：<code>Notice</code> 居中；<code>In order to…, the Student Union will…</code>；<code>All students are welcome to attend.</code>；<code>The Student Union</code>（右下署名）</p>
+    <p>🔹 <b>海报</b>：标题醒目；三段式结构，用短句；<code>Don't miss it!</code> / <code>Join us now!</code></p>
+    <p>🔹 <b>演讲稿</b>：<code>Good morning, everyone. I am honored to share…</code>；结尾 <code>Thank you all for your attention.</code></p>
+  </div>
+  <div class="note warn"><b>格式铁律（错一处扣 2–3 分）</b>
+    ① 书信首行：<code>Dear + 称呼,</code>（英文逗号，不能中文逗号）；末行右下 <code>Yours sincerely,</code> + 姓名，姓名前<b>不要</b>再加「 Yours」；
+    ② 通知必须<b>标题居中</b>，署名右下，<b>不写称呼</b>；
+    ③ 演讲稿必须有<b>称呼</b>和<b>致谢结尾</b>；
+    ④ 全文<b>不要写日期行</b>（除非题目明确给了日期），<b>不要写地址</b>。</div>
+
+  <h3 id="k2-wb">⑧ 写作 Part B 大作文 · 约 150 词 · 15 分</h3>
+  <p>英语二大作文<b>必考图画作文</b>：给一幅漫画（近年多为生活/科技/社会话题），要求先描述画面，再发表评论。三种子类型轮换：</p>
+  <div class="sub" id="c-ky2-methods-10">
+    <h4>三种子类型与套路</h4>
+    <p>🔹 <b>描述型</b>（近年最多）：先描述画面（what's in the picture），再引出主题</p>
+    <p>🔹 <b>寓意型</b>（<code>What does the cartoon suggest?</code>）：先描述，再谈<b>寓意</b>——「这幅画揭示了……问题」</p>
+    <p>🔹 <b>评论型</b>（较老）：先描述，再评<b>利弊</b>或<b>原因</b></p>
+  </div>
+  <div class="sub" id="c-ky2-methods-11">
+    <h4>三段式模板（照着写就能拿到 11+）</h4>
+    <ol class="steps">
+      <li><b>第一段：描述画面（3–4 句）</b>
+        <code>As is vividly depicted in the cartoon, …</code> 描述画面主体 + <code>Behind the character, there is a …</code> 描述背景 + <code>Apparently, this scene reflects a common phenomenon in today's society.</code> 引出主题</li>
+      <li><b>第二段：分析寓意/原因/利与弊（4–5 句）</b>
+        <code>The message conveyed by the cartoon is obvious: …</code> 亮观点 → <code>For one thing, …</code> → <code>For another, …</code> → <code>In addition, …</code> 分析两面</li>
+      <li><b>第三段：措施/呼吁（2–3 句）</b>
+        <code>Therefore, it is high time that we took some effective measures to …</code> 提建议 + <code>Only in this way can we …</code> 倒装收尾</li>
+    </ol>
+  </div>
+  <div class="sub" id="c-ky2-methods-12">
+    <h4>高频话题与主题词（英语二大作文热点库）</h4>
+    <p>🔹 <b>健康</b>：health / fitness / diet / exercise / mental health</p>
+    <p>🔹 <b>科技</b>：artificial intelligence / smartphone addiction / online shopping / digital literacy</p>
+    <p>🔹 <b>社会</b>：volunteer / charity / environment / public facilities</p>
+    <p>🔹 <b>教育</b>：extracurricular / study habit / lifelong learning / pressure</p>
+    <p>🔹 <b>人物品质</b>：cooperation / communication / patience / initiative</p>
+  </div>
+  <div class="note bad"><b>大作文三大扣分雷区</b>
+    ① <b>描述画面用词贫乏</b>：只写 <code>There is a man</code>——要用 <code>depicted / portrayed / shown / demonstrated</code> 替换 <code>show</code>；
+    ② <b>寓意段空谈</b>：只写「应该重视健康」，没有具体解释——要写<b>为什么重要</b>；
+    ③ <b>字数不足</b>：&lt;130 词直接降档，一定要写满 150–180 词。</div>
+</section>
+
+    <div id="pageEmpty" class="empty hidden">本页没有匹配的内容——试试搜索框下方其他页面的结果 →</div>
+    <nav class="pager">
+  <a class="prev" href="ky2-vocab.html">← 上一节<span>考研英语二 核心词</span></a>
+  <a class="home" href="index.html">🏠 目录</a>
+  <a class="next" href="diff.html">下一节<span>近义词辨析</span></a>
+</nav>
+    <footer class="foot">
+      <span>CET-6 &amp; 考研英语二 · 核心考点手册 · 网页版</span>
+      <span><a href="index.html">回到首页</a></span>
+    </footer>
+  </main>
+</div>
+
+<button class="mobbar" id="mobbar" aria-label="打开目录与进度">
+  <span class="mb"><span class="lb">CET-6 <b id="mCet6">0/0</b></span><span class="tr"><i id="mbCet6"></i></span></span>
+  <span class="mb"><span class="lb">考研二 <b id="mKy2">0/0</b></span><span class="tr"><i class="b" id="mbKy2"></i></span></span>
+  <span class="go">☰</span>
+</button>
+<div class="scrim" id="scrim"></div>
+<noscript><p style="padding:14px;color:#b91c1c">本手册的搜索、进度保存与筛选需要启用 JavaScript。</p></noscript>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
