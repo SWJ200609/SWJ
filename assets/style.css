@@ -355,7 +355,36 @@ details.word.flash{border-color:var(--warn)}
   .mobbar{gap:12px;padding-left:14px;padding-right:14px}
 }
 
+/* ---------- 播放读音按钮（Web Speech API，无音频文件） ---------- */
+.say{border:0;background:none;font:inherit;font-size:.8rem;line-height:1;padding:2px 5px;
+     border-radius:6px;color:var(--muted);cursor:pointer;vertical-align:middle;white-space:nowrap}
+.say:hover{color:var(--accent);background:var(--accent-soft)}
+.say:active{color:var(--accent)}
+.say[disabled]{opacity:.4;cursor:default}
+.say[disabled]:hover{color:var(--muted);background:none}
+
+/* ---------- 每日词表（卡片由 app.js 分页渲染） ---------- */
+.daily h4 b{color:var(--text)}
+.daybar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+.daybar .btn{padding:6px 11px}
+.daybox{display:inline-flex;align-items:center;gap:5px;font-size:.84rem;color:var(--muted)}
+.daybox input[type=number]{
+  width:52px;padding:5px 6px;text-align:center;font:inherit;font-size:.86rem;
+  border:1px solid var(--border-strong);border-radius:8px;background:var(--surface);color:var(--text)
+}
+.daybox input[type=number]:focus{outline:0;border-color:var(--accent)}
+.daynav:disabled{opacity:.4;cursor:default}
+.daynav:disabled:hover{border-color:var(--border-strong);color:var(--muted)}
+.daystat{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);
+         margin:10px 0 12px}
+.daystat b{color:var(--text);font-weight:700}
+.daystat .tag{font-size:.7rem;padding:2px 8px;border-radius:99px;border:1px solid transparent;
+              background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.daystat .tag.g{background:var(--good-soft);color:var(--good)}
+.wl-empty{padding:22px 16px;text-align:center;color:var(--muted);font-size:.85rem;
+          border:1px dashed var(--border-strong);border-radius:var(--r);background:var(--surface)}
+
 /* ---------- 打印：把新增的交互件去掉 ---------- */
 @media print{
-  .mobbar,.pager,#results,.menu-btn,.scrim,footer.foot{display:none!important}
+  .mobbar,.pager,#results,.menu-btn,.scrim,.say,.daybar,.daystat,footer.foot{display:none!important}
 }
