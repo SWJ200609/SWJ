@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>单词查询 · CET-6 & 考研英语二 复习站</title>
-<meta name="description" content="在 1350 条词条（1320 个不重复单词）里即时检索：英文、音标、中文释义、例句、词性全都能搜。支持发音、已掌握标记、按批次过词、抽背卡自测。进度只存在你本机浏览器。">
+<meta name="description" content="在 1350 条词条（1320 个不重复单词）里即时检索：英文、音标、中文释义、例句、词性、同义词全都能搜。每个词配 1–2 个同义词或同根词，词表里的词可点着跳过去看。支持发音、已掌握标记、按批次过词、抽背卡自测。进度只存在你本机浏览器。">
 <meta name="theme-color" content="#faf9f7">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5bd0'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3E%E8%AF%8D%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
@@ -19,7 +19,7 @@
   </a>
   <div class="qjump" id="qjump">
     <span class="ki">🔎</span>
-    <input type="search" placeholder="查词（英文 / 音标 / 中文）  按 / 聚焦" aria-label="查词">
+    <input type="search" placeholder="查词（英文 / 音标 / 中文 / 同义词）  按 / 聚焦" aria-label="查词">
     <button class="go" type="button">跳转</button>
   </div>
   <div class="tools">
@@ -51,7 +51,7 @@
     <div class="hero">
       <div class="eyebrow">1320 个单词 · 1350 条词条 · 全部在本机检索</div>
       <h1>单词查询
-        <span class="sub">英文 / 音标 / 中文释义 / 例句 / 词性，任意一种都能搜</span>
+        <span class="sub">英文 / 音标 / 中文释义 / 例句 / 词性 / 同义词，任意一种都能搜</span>
       </h1>
       <p class="lead">下面这个输入框直接连着整份词表，不打字不打断——边输边出结果。搜不出来的时候它会按拼写相似度告诉你「你是不是要找这个词」。</p>
     </div>
@@ -63,7 +63,7 @@
         <div class="qbox">
           <span class="ki">🔎</span>
           <input id="wq" type="search" autocomplete="off" spellcheck="false"
-                 placeholder="试试 accuse、/əˈkjuːz/、被指控、v. 或例句里的短语"
+                 placeholder="试试 accuse、/əˈkjuːz/、被指控、v.、同义词，或例句里的短语"
                  aria-label="查询单词">
           <button class="wclear" id="wclear" type="button">清空</button>
         </div>
@@ -132,6 +132,7 @@
       <div class="note tip">
         <b>标记规则</b>
         <p>每张词条右上角的 <code>CET-6 ○</code> / <code>考研二 ○</code> 是独立的开关：同一个单词在两本词表里出现两次，需要分别标记。进度按「词条出现次数」统计，所以 CET-6 是 720 条、考研二是 630 条，而不是 1320 个单词。</p>
+        <p><b>同义</b> 那一行是每个词配的 1–2 个<b>同义词</b>，或带词性前缀的<b>同根词 / 派生词</b>（如 <code>n. abortion 流产</code>）。词表里有的同义词是可点的，点一下直接跳过去看它的卡片；不在词表里的只是给你认脸熟，不点。</p>
       </div>
     </section>
 

@@ -1,6 +1,6 @@
 /* ============================================================
    单词查询：在 1350 条词条里做即时检索
-   - 英文/音标/中文释义/例句/词性 全部可搜
+   - 英文/音标/中文释义/例句/词性/同义词 全部可搜
    - 词表、词性、掌握状态筛选 + 按批次浏览
    - 点击发音（Web Speech，英式音标用 en-GB）
    - 「已掌握」进度存在本机浏览器，清站点数据即重置
@@ -26,10 +26,14 @@
   var examName = { cet6: 'CET-6', ky2: '考研英语二' };
   var examShort = { cet6: 'CET-6', ky2: '考研二' };
 
-  /* 预计算搜索串（一次性） */
+  /* 预计算搜索串（一次性）。同义词/同根词也进搜索范围。 */
+  var WORD_SET = {};   // 词表里有的词 —— 同义词条目能点成跳转
   for (var i = 0; i < D.rows.length; i++) {
     var r = D.rows[i];
-    if (!r.hay) r.hay = norm(r.w + ' ' + r.ipa + ' ' + r.pos + ' ' + r.zh + ' ' + r.eg);
+    WORD_SET[norm(r.w)] = 1;
+    var synTxt = (r.syn || []).join(' ');
+    if (r.syn && r.syn.length) r.synN = synTxt;
+    if (!r.hay) r.hay = norm(r.w + ' ' + r.ipa + ' ' + r.pos + ' ' + r.zh + ' ' + r.eg + ' ' + synTxt);
   }
   var ALL_ROWS = D.rows;
 
@@ -131,6 +135,7 @@
     if (norm(row.pos).indexOf(q) >= 0) return 70;
     if (norm(row.zh).indexOf(q) >= 0) return 90;  // 中文释义优先于例句
     if (norm(row.ipa).indexOf(q) >= 0) return 80;
+    if (row.synN && row.synN.indexOf(q) >= 0) return 45;   // 同义词/同根词
     if (norm(row.eg).indexOf(q) >= 0) return 50;
     return 0;
   }
@@ -196,6 +201,37 @@
   /* ---------- 渲染 ---------- */
   var elList, elCount, elMore, elEmpty, elMeta;
 
+  /* 同义词/同根词条目：
+     纯英文 = 同义词；带 ' | ' = 同根词（左英文含词性，右中文）。
+     interactive 为 true 时，词表里有的同义词渲染成可点击跳转。 */
+  function synItems(row, q, interactive) {
+    var s = row.syn;
+    if (!s || !s.length) return '';
+    var out = [];
+    for (var i = 0; i < s.length; i++) {
+      var t = String(s[i] == null ? '' : s[i]).trim();
+      if (!t) continue;
+      var p = t.split(' | ');
+      if (p.length > 1) {
+        out.push('<span class="syn-rel"><span class="syn-e">' + hl(p[0], q) + '</span>'
+          + '<span class="syn-z">' + hl(p[1], q) + '</span></span>');
+      } else {
+        var key = norm(t);
+        if (interactive && key && WORD_SET[key]) {
+          out.push('<button class="syn" data-goto="' + esc(t) + '" title="词表里有「' + esc(t) + '」，点这里跳过去">'
+            + hl(t, q) + '</button>');
+        } else {
+          out.push('<span class="syn">' + hl(t, q) + '</span>');
+        }
+      }
+    }
+    return out.join('<span class="syn-sep">·</span>');
+  }
+  function synHTML(row, q, interactive) {
+    var items = synItems(row, q, interactive);
+    return items ? '<div class="wc-syn"><span class="eg-k">同义</span>' + items + '</div>' : '';
+  }
+
   function cardHTML(item) {
     var row = item.row, q = state.q.trim();
     var mk = '';
@@ -226,6 +262,7 @@
       +     (row.pos ? '<span class="badge pos">' + esc(row.pos) + '</span>' : '')
       +   '</div>'
       +   '<div class="wc-zh">' + hl(row.zh || '', q) + '</div>'
+      +   synHTML(row, q, true)
       +   (row.eg ? '<div class="wc-eg"><span class="eg-k">例句</span>' + hl(row.eg, q) + '</div>' : '')
       +   (src.length ? '<div class="wc-src">' + src.join('') + '</div>' : '')
       + '</article>';
@@ -253,7 +290,7 @@
         var chips = sug.map(function (w) { return '<button class="chip" data-goto="' + esc(w) + '">' + esc(w) + '</button>'; }).join('');
         return '<div class="e-t">没有匹配「' + esc(q) + '」的词条</div>'
           + '<div class="e-s">你是不是要找：</div><div class="chips">' + chips + '</div>'
-          + '<p class="hint" style="margin-top:14px">也可以试试搜<b>中文释义</b>（如「翻译」）、<b>音标</b>（如 /aɪ/）或<b>例句片段</b>。</p>';
+          + '<p class="hint" style="margin-top:14px">也可以试试搜<b>中文释义</b>（如「翻译」）、<b>同义词</b>（如 "sincere" 能搜出 cordial）、<b>音标</b>（如 /aɪ/）或<b>例句片段</b>。</p>';
       }
       return '<div class="e-t">没有匹配「' + esc(q) + '」的词条</div>'
         + '<p class="hint" style="margin-top:10px">试试更短的片段，或清空筛选条件。</p>';
@@ -600,6 +637,7 @@
       + '<div class="face-back">'
       +   '<div class="ipa">' + esc(c.ipa) + ' <span class="badge pos">' + esc(c.pos) + '</span></div>'
       +   '<div class="face-zh">' + esc(c.zh) + '</div>'
+      +   synHTML(c, '', false)
       +   (c.eg ? '<div class="wc-eg"><span class="eg-k">例句</span>' + esc(c.eg) + '</div>' : '')
       +   '<div class="face-acts">'
       +     '<button class="btn ky2" id="dKnown">✓ 已掌握</button>'
